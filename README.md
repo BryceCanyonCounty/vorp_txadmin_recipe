@@ -1,40 +1,36 @@
-# VORP-CORE
+# TXAdmin RedM Recipe for VorpCore Framework
 
-> _**WARNING:** This is in active development and may not be guaranteed to work in it's current state. Use this with your own caution._
-
-A full fledge [txAdmin](https://txadm.in/) recipe for [Vorp Core](http://docs.vorpcore.com:3000/)
+A full fledge [txAdmin](https://txadm.in/) recipe for [Vorp Core](http://docs.vorpcore.com:3000/), repacked by BCC to include a few essential public scripts along with the BCC suite of scripts.
 
 [Discord VORP](https://discord.gg/23MPbQ6)
 
 ## Included Features
  - Vorp Core Premade (Most Stable Releases)
- - Jobs
-	 - Police
-	 - Postman
-	 - Hunting
-	 - Fishing
-	 - Woodcutter
-	 - Boss Manager
- - Character Creator
- - Metabolism
- - Economy
-	 - Dollars, Gold
-	 - Bank
- - Stores
-	 - Clothing Stores
-	 - Shops
-	 - Weapons (v2)
-	 - Stables (Horses)
-	 - Barber Shops
- - Cinema
- - Housing
- - Custom Walk Animations
- - Admin Menu
- - ghmattimysql
-	 - Utilizes oxmysql for more modern support
+	- Jobs
+		- Police
+		- Postman
+		- Hunting
+		- Fishing
+		- Woodcutter
+		- Boss Manager
+	- Character Creator
+	- Metabolism
+	- Economy
+		- Dollars, Gold
+		- Bank
+	- Stores
+		- Clothing Stores
+		- Shops
+		- Weapons (v2)
+		- Stables (Horses)
+		- Barber Shops
+	- Cinema
+	- Housing
+	- Custom Walk Animations
+	- Admin Menu
+	- oxmysql
 - Fixes
 	- Interior fixes
-
 
 ## Dependencies
 -   Windows or Linux (Ubuntu/Debian recommended)
