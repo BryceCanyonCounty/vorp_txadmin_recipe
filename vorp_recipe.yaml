@@ -21,7 +21,7 @@ tasks:
     src: ./temp/premade/server
     dest: ./server
 
-# TXRecipe Specific server.cfg
+# TXRecipe Specific server.cfg + resource.cfg
   - action: download_github
     src: https://github.com/BryceCanyonCounty/vorp_txadmin_recipe
     ref: main
@@ -30,6 +30,20 @@ tasks:
   - action: move_path
     src: ./temp/vorp_txAdminRecipe/server.cfg
     dest: ./server/server.cfg
+  
+  - action: move_path
+    src: ./temp/vorp_txAdminRecipe/resources.cfg
+    dest: ./server/resources.cfg
+
+# MenuAPI
+  - action: download_github
+    src: https://github.com/outsider31000/menuapi
+    ref: main
+    dest: ./temp/menuapi
+
+  - action: move_path
+    src: ./temp/menuapi
+    dest: ./server/resources/[api]/menuapi
 
 # Public Scripts
   - action: download_github
@@ -42,11 +56,6 @@ tasks:
     src: ./temp/public-scripts/server-data/resources/[maps]
     dest: ./server/resources/[maps]
 
-# Use OneSync scripts from public script
-  - action: move_path
-    src: ./temp/public-scripts/server-data/resources/[onesync]
-    dest: ./server/resources/[onesync]
-
 # STANDALONE CFX
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
@@ -56,3 +65,5 @@ tasks:
 # Clean up CFX-files
   - action: remove_path
     path: ./temp
+
+# TODO: ADD BCC SCRIPTS
