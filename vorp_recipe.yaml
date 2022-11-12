@@ -21,30 +21,9 @@ tasks:
     src: ./temp/premade/server
     dest: ./server
 
-  # - action: move_path
-  #   src: ./temp/premade/server/resources
-  #   dest: ./resources
-  
-  # - action: move_path
-  #   src: ./temp/premade/server/icon.png
-  #   dest: ./icon.png
-
-  # - action: move_path
-  #   src: ./temp/premade/server/perms.cfg
-  #   dest: ./perms.cfg
-
-  # - action: move_path
-  #   src: ./temp/premade/server/resources.cfg
-  #   dest: ./resources.cfg
-
-  # - action: move_path
-  #   src: ./temp/premade/server/vorp_perms.cfg
-  #   dest: ./vorp_perms.cfg
-  
-
 # TXRecipe Specific server.cfg
   - action: download_github
-    src: https://github.com/VORPCORE/VORP_txAdmin
+    src: https://github.com/BryceCanyonCounty/vorp_txadmin_recipe
     ref: main
     dest: ./temp/vorp_txAdminRecipe
   
@@ -52,17 +31,27 @@ tasks:
     src: ./temp/vorp_txAdminRecipe/server.cfg
     dest: ./server/server.cfg
 
+# Public Scripts
+  - action: download_github
+    src: https://github.com/outsider31000/public-scripts
+    ref: main
+    dest: ./temp/public-scripts
+
+# Use Interiors and other maps from public script
+  - action: move_path
+    src: ./temp/public-scripts/server-data/resources/[maps]
+    dest: ./server/resources/[maps]
+
+# Use OneSync scripts from public script
+  - action: move_path
+    src: ./temp/public-scripts/server-data/resources/[onesync]
+    dest: ./server/resources/[onesync]
+
 # STANDALONE CFX
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
-    dest: ./resources/[cfx-default]
-
-# Interiors - Interior fixes
-  - action: download_github
-    src: https://github.com/MissBehavin/interiors
-    ref: master
-    dest: ./resources/[cfx-default]/[gameplay]/interiors
+    dest: ./resources
 
 # Clean up CFX-files
   - action: remove_path
