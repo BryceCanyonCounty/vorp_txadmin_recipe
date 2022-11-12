@@ -1,8 +1,8 @@
 $engine: 3
 name: Vorpcore
-version: 2.0.0
-author: vorpcore
-description: VorpCore Official txAdmin recipe! This will set up a base vorp official server setup.
+version: 1.0.0
+author: vorpcore x BCC
+description: This will set up a base vorp official server setup + BCC Scripts.
 
 tasks:
 # Download Pre-Made Files
@@ -18,24 +18,29 @@ tasks:
   
 # Move all resources and files to root for txadmin
   - action: move_path
-    src: ./temp/premade/server/resources
-    dest: ./resources
+    src: ./temp/premade/server
+    dest: ./server
+
+  # - action: move_path
+  #   src: ./temp/premade/server/resources
+  #   dest: ./resources
   
-  - action: move_path
-    src: ./temp/premade/server/icon.png
-    dest: ./icon.png
+  # - action: move_path
+  #   src: ./temp/premade/server/icon.png
+  #   dest: ./icon.png
 
-  - action: move_path
-    src: ./temp/premade/server/perms.cfg
-    dest: ./perms.cfg
+  # - action: move_path
+  #   src: ./temp/premade/server/perms.cfg
+  #   dest: ./perms.cfg
 
-  - action: move_path
-    src: ./temp/premade/server/resources.cfg
-    dest: ./resources.cfg
+  # - action: move_path
+  #   src: ./temp/premade/server/resources.cfg
+  #   dest: ./resources.cfg
 
-  - action: move_path
-    src: ./temp/premade/server/vorp_perms.cfg
-    dest: ./vorp_perms.cfg
+  # - action: move_path
+  #   src: ./temp/premade/server/vorp_perms.cfg
+  #   dest: ./vorp_perms.cfg
+  
 
 # TXRecipe Specific server.cfg
   - action: download_github
@@ -45,7 +50,7 @@ tasks:
   
   - action: move_path
     src: ./temp/vorp_txAdminRecipe/server.cfg
-    dest: ./server.cfg
+    dest: ./server/server.cfg
 
 # STANDALONE CFX
   - action: download_github
@@ -53,7 +58,7 @@ tasks:
     subpath: resources
     dest: ./resources/[cfx-default]
 
-# Interiors - Interior fixes (Not Vorp official, but essential.)
+# Interiors - Interior fixes
   - action: download_github
     src: https://github.com/MissBehavin/interiors
     ref: master
