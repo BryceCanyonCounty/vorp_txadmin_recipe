@@ -51,10 +51,6 @@ tasks:
   - action: download_github
     src: https://github.com/outsider31000/menuapi
     ref: main
-    dest: ./temp/menuapi
-
-  - action: move_path
-    src: ./temp/menuapi
     dest: ./resources/[api]/menuapi
 
 # Public Scripts
@@ -74,8 +70,57 @@ tasks:
     subpath: resources
     dest: ./resources
 
-# Clean up CFX-files
+# Download and add BCC Scripts
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-loadscreen
+    ref: main
+    dest: ./resources/[bcc]/bcc-loadscreen
+  
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-loadscreen-helper
+    ref: main
+    dest: ./resources/[bcc]/bcc-loadscreen-helper
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-blindfold
+    ref: main
+    dest: /resources/[bcc]/bcc-blindfold
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-versioner
+    ref: main
+    dest: ./resources/[bcc]/bcc-versioner
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-serverpassword
+    ref: main
+    dest: ./resources/[bcc]/bcc-serverpassword
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-anticheat
+    ref: main
+    dest: ./resources/[bcc]/bcc-anticheat
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-discord
+    ref: main
+    dest: ./resources/[bcc]/bcc-discord
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-pets
+    ref: main
+    dest: ./resources/[bcc]/bcc-pets
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-scene
+    ref: main
+    dest: ./resources/[bcc]/bcc-scene
+
+  - action: download_github
+    src: https://github.com/BryceCanyonCounty/bcc-job-alerts
+    ref: main
+    dest: ./resources/[bcc]/bcc-job-alerts
+
+# Clean up temporary files
   - action: remove_path
     path: ./temp
-
-# TODO: ADD BCC SCRIPTS
