@@ -16,10 +16,22 @@ tasks:
   - action: query_database
     file: ./temp/premade/MariaDB.sql
   
-# Move all resources and files to root for txadmin
+# Move all vorp resources and files to root for txadmin
   - action: move_path
-    src: ./temp/premade/server
-    dest: ./server
+    src: ./temp/premade/server/resources
+    dest: ./server/resources
+
+  - action: move_path
+    src: ./temp/premade/server/perms.cfg
+    dest: ./server/perms.cfg
+
+  - action: move_path
+    src: ./temp/premade/server/icon.png
+    dest: ./server/icon.png
+
+  - action: move_path
+    src: ./temp/premade/server/vorp_perms.cfg
+    dest: ./server/vorp_perms.cfg
 
 # TXRecipe Specific server.cfg + resource.cfg
   - action: download_github
