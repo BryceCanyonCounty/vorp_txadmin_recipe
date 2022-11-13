@@ -19,19 +19,19 @@ tasks:
 # Move all vorp resources and files to root for txadmin
   - action: move_path
     src: ./temp/premade/server/resources
-    dest: ./server/resources
+    dest: ./resources
 
   - action: move_path
     src: ./temp/premade/server/perms.cfg
-    dest: ./server/perms.cfg
+    dest: ./perms.cfg
 
   - action: move_path
     src: ./temp/premade/server/icon.png
-    dest: ./server/icon.png
+    dest: ./icon.png
 
   - action: move_path
     src: ./temp/premade/server/vorp_perms.cfg
-    dest: ./server/vorp_perms.cfg
+    dest: ./vorp_perms.cfg
 
 # TXRecipe Specific server.cfg + resource.cfg
   - action: download_github
@@ -41,11 +41,11 @@ tasks:
   
   - action: move_path
     src: ./temp/vorp_txAdminRecipe/server.cfg
-    dest: ./server/server.cfg
+    dest: ./server.cfg
   
   - action: move_path
     src: ./temp/vorp_txAdminRecipe/resources.cfg
-    dest: ./server/resources.cfg
+    dest: ./resources.cfg
 
 # MenuAPI
   - action: download_github
@@ -55,7 +55,7 @@ tasks:
 
   - action: move_path
     src: ./temp/menuapi
-    dest: ./server/resources/[api]/menuapi
+    dest: ./resources/[api]/menuapi
 
 # Public Scripts
   - action: download_github
@@ -66,7 +66,7 @@ tasks:
 # Use Interiors and other maps from public script
   - action: move_path
     src: ./temp/public-scripts/server-data/resources/[maps]
-    dest: ./server/resources/[maps]
+    dest: ./resources/[maps]
 
 # STANDALONE CFX
   - action: download_github
